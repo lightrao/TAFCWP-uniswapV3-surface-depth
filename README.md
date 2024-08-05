@@ -35,3 +35,11 @@ GraphQL:
   }
 }
 ```
+
+Pulling Liquid Uniswap Pool Prices
+
+```shell
+pip install python-dotenv
+pip freeze > requirements.txt
+python python main_v2.py
+```
