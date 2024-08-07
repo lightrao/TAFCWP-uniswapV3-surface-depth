@@ -43,3 +43,5 @@ pip install python-dotenv
 pip freeze > requirements.txt
 python python main_v2.py
 ```
+
+Structuring Triangular Groups - Part 1

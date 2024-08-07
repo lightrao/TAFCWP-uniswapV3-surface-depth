@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from dotenv import load_dotenv
+import func_triangular_arb_v2
 
 
 # Load environment variables from .env file
@@ -38,5 +39,5 @@ def retrieve_uniswap_information():
 
 
 if __name__ == "__main__":
-    mid_prices = retrieve_uniswap_information()
-    print(mid_prices["data"]["pools"][0])
+    pairs = retrieve_uniswap_information()["data"]["pools"]
+    func_triangular_arb_v2.structure_trading_pairs(pairs, 50)
