@@ -11,7 +11,6 @@ def structure_trading_pairs(pairs, limit):
         # Get first pair (A)
         a_base = pair_a["token0"]["symbol"]
         a_quote = pair_a["token1"]["symbol"]
-        print(a_base)
         a_pair = a_base + "_" + a_quote
         a_token_0_id = pair_a["token0"]["id"]
         a_token_1_id = pair_a["token1"]["id"]
