@@ -47,3 +47,5 @@ python python main_v2.py
 Structuring Triangular Groups - Part 1
 
 Structuring Triangular Groups - Part 2
+
+Structuring Triangular Groups - Part 3

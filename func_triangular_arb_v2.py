@@ -82,3 +82,43 @@ def structure_trading_pairs(pairs, limit):
                             ):
                                 combined = a_pair + "," + b_pair + "," + c_pair
                                 unique_string = "".join(sorted(combined))
+
+                                # Output pair
+                                if unique_string not in remove_duplicates_list:
+                                    output_dict = {
+                                        "aPair": a_pair,
+                                        "aBase": a_base,
+                                        "aQuote": a_quote,
+                                        "bPair": b_pair,
+                                        "bBase": b_base,
+                                        "bQuote": b_quote,
+                                        "cPair": c_pair,
+                                        "cBase": c_base,
+                                        "cQuote": c_quote,
+                                        "combined": combined,
+                                        "aToken0Id": a_token_0_id,
+                                        "bToken0Id": b_token_0_id,
+                                        "cToken0Id": c_token_0_id,
+                                        "aToken1Id": a_token_1_id,
+                                        "bToken1Id": b_token_1_id,
+                                        "cToken1Id": c_token_1_id,
+                                        "aContract": a_contract,
+                                        "bContract": b_contract,
+                                        "cContract": c_contract,
+                                        "aToken0Decimals": a_token_0_decimals,
+                                        "aToken1Decimals": a_token_1_decimals,
+                                        "bToken0Decimals": b_token_0_decimals,
+                                        "bToken1Decimals": b_token_1_decimals,
+                                        "cToken0Decimals": c_token_0_decimals,
+                                        "cToken1Decimals": c_token_1_decimals,
+                                        "aToken0Price": a_token_0_price,
+                                        "aToken1Price": a_token_1_price,
+                                        "bToken0Price": b_token_0_price,
+                                        "bToken1Price": b_token_1_price,
+                                        "cToken0Price": c_token_0_price,
+                                        "cToken1Price": c_token_1_price,
+                                    }
+                                    triangular_pairs_list.append(output_dict)
+                                    remove_duplicates_list.append(unique_string)
+
+    return triangular_pairs_list

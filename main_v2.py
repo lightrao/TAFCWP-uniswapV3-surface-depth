@@ -40,4 +40,5 @@ def retrieve_uniswap_information():
 
 if __name__ == "__main__":
     pairs = retrieve_uniswap_information()["data"]["pools"]
-    func_triangular_arb_v2.structure_trading_pairs(pairs, 50)
+    structured_pairs = func_triangular_arb_v2.structure_trading_pairs(pairs, 100)
+    print(len(structured_pairs))
